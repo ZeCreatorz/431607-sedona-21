@@ -1,7 +1,26 @@
 .photo-list {
+  display: grid;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+@media (min-width: $tablet-width) {
+  .photo-list {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .photo-list__item--first {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+.photo-list__item {
+  text-align: center;
 }
 
 .photo-list__content {
@@ -11,7 +30,6 @@
 
 .photo-list__link {
   display: block;
-  width: 320px;
 }
 
 .photo-list__title {
@@ -29,10 +47,6 @@
   line-height: 24px;
   color: $darkgray;
   text-transform: none;
-}
-
-.photo-list__item {
-  text-align: center;
 }
 
 .photo-list__text {
